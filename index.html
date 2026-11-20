@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Yelema x Mstudio, avant l'installation</title>
+<meta name="description" content="Le formulaire des startups Mstudio pour préparer l'installation de leurs Experts IA Yelema.">
+<link rel="icon" href="assets/logo/yelema-icon.png">
+<style>
+@font-face{font-family:'Space Grotesk';font-weight:300 700;font-display:swap;src:url('assets/fonts/SpaceGrotesk-Variable.woff2') format('woff2')}
+@font-face{font-family:'Funnel Display';font-weight:300 800;font-display:swap;src:url('assets/fonts/FunnelDisplay-Variable.woff2') format('woff2')}
+:root{
+  --indigo:#301667;--violet:#8D68FA;--violet-deep:#4A299C;--lav:#C5C4FF;--lavp:#E0E1FF;
+  --lilac:#F3EFFE;--lilac2:#EFE9FF;--bleu:#2E4EC4;--corail:#E4765A;--ink:#241A3A;--muted:#6B6580;--grey2:#938DA8;--line:#ECE8FA;
+  --green:#22A45D;--grad:linear-gradient(135deg,#2E4EC4,#8D68FA);
+  --hero:linear-gradient(160deg,#FFFFFF 0%,#F3EFFE 50%,#E0E1FF 100%);
+  --sh:0 1px 2px rgba(48,22,103,.05),0 8px 24px rgba(48,22,103,.06);--sh2:0 2px 4px rgba(48,22,103,.05),0 18px 44px rgba(48,22,103,.10);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:'Funnel Display',system-ui,sans-serif;color:var(--ink);background:#F8F7FC;font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;min-height:100vh}
+h1,h2,h3,h4,.sg{font-family:'Space Grotesk',system-ui,sans-serif;letter-spacing:-.02em}
+button{font:inherit;cursor:pointer;color:inherit}
+.ic{display:inline-block;width:22px;height:22px;flex:0 0 auto}
+.ic svg{width:100%;height:100%;display:block}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+.eyebrow{font-family:'Space Grotesk';font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--violet)}
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .in{display:flex;align-items:center;gap:16px;height:64px}
+.top img.logo{height:26px}
+.prog{flex:1;height:8px;border-radius:999px;background:var(--lilac2);overflow:hidden;max-width:420px;margin-left:auto}
+.prog i{display:block;height:100%;width:0;background:var(--grad);border-radius:999px;transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.stepn{font-size:13px;color:var(--muted);font-weight:600;white-space:nowrap}
+.screen{display:none;padding:36px 0 60px;min-height:calc(100vh - 64px)}
+.screen.on{display:block;animation:enter .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.q-ic{width:52px;height:52px;border-radius:16px;background:var(--grad);display:grid;place-items:center;color:#fff;box-shadow:0 10px 24px rgba(141,104,250,.35)}
+.q-ic .ic{width:26px;height:26px}
+.screen h2{font-size:32px;color:var(--indigo);margin:14px 0 6px;line-height:1.1}
+.lede{color:var(--muted);font-size:17px;margin:0 0 24px;max-width:640px}
+.sub{flex-wrap:wrap;font-family:'Space Grotesk';font-weight:600;color:var(--indigo);font-size:18px;margin:28px 0 12px;display:flex;align-items:center;gap:10px}
+.sub small{flex-basis:100%;font-family:'Funnel Display';font-weight:400;color:var(--muted);font-size:14px}
+/* accueil */
+.hero{background:var(--hero);border-bottom:1px solid var(--line);border-radius:0 0 40px 40px;padding:44px 0 56px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-70px;bottom:-110px;width:380px;height:380px;background:url('assets/site-pattern-3.svg') no-repeat center/contain;opacity:.12}
+.hero h1{font-size:50px;line-height:1.04;margin:12px 0 16px;color:var(--indigo);max-width:640px}
+.hero h1 em{font-style:normal;color:var(--corail)}
+.hero p{color:#4A4560;font-size:19px;margin:0 0 26px;max-width:560px}
+.perks{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 30px}
+.perks > span{display:flex;align-items:center;gap:8px;color:var(--indigo);font-weight:500;font-size:15px;background:#fff;border:1px solid var(--line);box-shadow:0 4px 12px rgba(48,22,103,.06);padding:8px 14px;border-radius:999px}
+.perks .ic{width:18px;height:18px;color:var(--violet)}
+.etapes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.etape{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--sh)}
+.etape .chip{width:44px;height:44px;border-radius:14px;background:var(--grad);color:#fff;display:grid;place-items:center}
+.etape b{display:block;font-family:'Space Grotesk';font-size:18px;color:var(--indigo);margin-top:12px}
+.etape p{color:var(--muted);font-size:15px;margin:4px 0 0}
+/* cartes */
+.cards{display:grid;gap:12px}
+.c4{grid-template-columns:repeat(4,1fr)}.c3{grid-template-columns:repeat(3,1fr)}.c2{grid-template-columns:repeat(2,1fr)}
+.card{position:relative;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:10px;transition:transform .18s,box-shadow .18s,border-color .18s,background .18s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--sh);border-color:#D9CCFD}
+.card:active{transform:scale(.98)}
+.card .chip{width:44px;height:44px;border-radius:14px;background:var(--lavp);color:var(--violet);display:grid;place-items:center;transition:all .2s}
+.card .lg{width:44px;height:44px;border-radius:12px;background:#fff;border:1px solid var(--line);display:grid;place-items:center}
+.card .lg img{width:28px;height:28px;object-fit:contain}
+.card .av{width:52px;height:52px;border-radius:999px;object-fit:cover;box-shadow:0 2px 8px rgba(30,16,80,.18)}
+.card .t{font-family:'Space Grotesk';font-weight:600;color:var(--indigo);line-height:1.2}
+.card .s{font-size:13px;color:var(--muted)}
+.card .tick{position:absolute;top:12px;right:12px;width:24px;height:24px;border-radius:999px;border:1.5px solid var(--line);display:grid;place-items:center;color:#fff;transition:all .2s}
+.card .tick .ic{width:14px;height:14px;opacity:0}
+.card.sel{border-color:var(--violet);background:linear-gradient(180deg,#fff,var(--lilac));box-shadow:0 14px 34px rgba(141,104,250,.22)}
+.card.sel .chip{background:var(--grad);color:#fff}
+.card.sel .tick{background:var(--violet);border-color:var(--violet);animation:pop .3s}
+.card.sel .tick .ic{opacity:1}
+@keyframes pop{50%{transform:scale(1.3)}}
+.row-card{flex-direction:row;align-items:center;gap:14px}
+.row-card .tx{flex:1;padding-right:26px}
+/* pastilles d'outils */
+.logos{display:flex;flex-wrap:wrap;gap:10px}
+.logo-b{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 16px 7px 8px;font-size:15px;transition:all .15s}
+.logo-b img{width:26px;height:26px;object-fit:contain}
+.logo-b .ic{width:22px;height:22px;color:var(--violet)}
+.logo-b:hover{border-color:#D9CCFD}
+.logo-b.on{border-color:var(--violet);background:var(--lilac);box-shadow:0 6px 16px rgba(141,104,250,.2)}
+.addrow{display:flex;gap:8px;margin-top:12px;max-width:420px}
+.addrow input{flex:1}
+/* champs */
+.form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fld{background:#fff;border:1.5px solid var(--line);border-radius:18px;padding:10px 16px;display:flex;flex-direction:column;gap:2px;transition:border-color .18s,box-shadow .18s}
+.fld.full{grid-column:1/-1}
+.fld:focus-within{border-color:var(--violet);box-shadow:0 0 0 4px rgba(141,104,250,.15)}
+.fld label{font-size:12px;font-weight:600;color:var(--grey2);text-transform:uppercase;letter-spacing:.08em}
+.fld input,.fld textarea{display:block;width:100%;border:0;outline:0;font:inherit;font-size:16px;color:var(--ink);background:none;padding:4px 0;resize:vertical}
+.fld.bad{border-color:var(--corail);box-shadow:0 0 0 4px rgba(228,118,90,.15)}
+.mini-in{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:11px 18px;font:inherit;outline:0}
+.mini-in:focus{border-color:var(--violet)}
+.reveal{margin-top:14px;display:none}.reveal.on{display:block;animation:enter .3s}
+/* liste à préparer */
+.prep{background:#fff;border:1.5px solid var(--line);border-radius:22px;padding:6px 18px;box-shadow:var(--sh)}
+.pi{display:flex;gap:14px;align-items:flex-start;width:100%;background:none;border:0;border-bottom:1px solid var(--line);padding:14px 0;text-align:left}
+.pi:last-child{border-bottom:0}
+.pi .box{flex:0 0 26px;height:26px;border-radius:8px;border:1.5px solid #D3CBF3;display:grid;place-items:center;color:#fff;margin-top:2px;transition:all .2s}
+.pi .box .ic{width:15px;height:15px;opacity:0}
+.pi.on .box{background:var(--green);border-color:var(--green)}.pi.on .box .ic{opacity:1}
+.pi .tx b{display:block;font-weight:600;color:var(--indigo)}
+.pi .tx span{display:block;font-size:14px;color:var(--muted)}
+.pi .who{display:flex;margin-left:auto;flex:0 0 auto}
+.pi .who img{width:28px;height:28px;border-radius:999px;object-fit:cover;border:2px solid #fff;margin-left:-8px}
+.pi a{color:var(--violet-deep);font-weight:600}
+.legend{font-size:14px;color:var(--muted);margin:10px 2px 0}
+/* participants */
+.people{display:grid;gap:10px}
+.person{display:grid;grid-template-columns:1fr 1fr 40px;gap:10px;align-items:center}
+.person .fld{padding:8px 14px}
+.rm{width:40px;height:40px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--muted);display:grid;place-items:center}
+.rm:hover{border-color:var(--corail);color:var(--corail)}
+.rm .ic{width:16px;height:16px}
+.addp{margin-top:10px;background:none;border:1.5px dashed #D9CCFD;border-radius:999px;padding:9px 18px;color:var(--violet-deep);font-weight:600;display:inline-flex;gap:8px;align-items:center}
+.addp .ic{width:16px;height:16px}
+.tasks{display:grid;gap:10px}
+.task{display:flex;align-items:center;gap:12px}
+.task .n{flex:0 0 36px;height:36px;border-radius:12px;background:var(--grad);color:#fff;display:grid;place-items:center;font-family:'Space Grotesk';font-weight:700}
+.task .fld{flex:1}
+/* navigation */
+.nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:30px}
+.btn{border:0;border-radius:999px;padding:15px 28px;font-weight:600;font-size:16px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:transform .18s,box-shadow .18s,opacity .2s}
+.btn .ic{width:18px;height:18px}
+.btn-p{background:var(--grad);color:#fff;box-shadow:0 10px 26px rgba(141,104,250,.4)}
+.btn-p:hover{transform:translateY(-2px)}
+.btn-p:disabled{opacity:.5;cursor:wait;transform:none}
+.btn-g{background:#fff;border:1.5px solid var(--line);color:var(--indigo)}
+.btn-g:hover{border-color:var(--violet);color:var(--violet)}
+.btn-big{padding:18px 34px;font-size:18px}
+.err{color:var(--corail);font-size:14.5px;min-height:20px;margin-top:12px;font-weight:600}
+/* fin */
+.done{text-align:center;padding-top:50px}
+.done .ok{width:88px;height:88px;border-radius:999px;background:var(--grad);color:#fff;display:grid;place-items:center;margin:0 auto 18px;box-shadow:0 16px 40px rgba(141,104,250,.4);animation:pop .5s}
+.done .ok .ic{width:44px;height:44px}
+.done h2{font-size:38px}
+.done .lede{margin:0 auto 26px}
+.next{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:left;margin-top:24px}
+.next .etape b{margin-top:10px}
+.remind{margin:22px auto 0;max-width:620px;text-align:left;background:#fff;border:1.5px dashed #D9CCFD;border-radius:20px;padding:16px 20px}
+.remind b{font-family:'Space Grotesk';color:var(--indigo)}
+.remind ul{margin:8px 0 0;padding-left:20px;color:#4A4560;font-size:15px}
+footer{padding:20px;text-align:center;color:var(--grey2);font-size:13px}
+@media (max-width:760px){.c4{grid-template-columns:repeat(2,1fr)}.c3{grid-template-columns:1fr}.etapes,.next{grid-template-columns:1fr}.hero h1{font-size:36px}.form{grid-template-columns:1fr}.person{grid-template-columns:1fr 40px}.person .fld:nth-child(2){grid-column:1}.screen h2{font-size:26px}.q-ic{display:none}.stepn{display:none}.prog{max-width:none}}
+@media (max-width:420px){.c4{grid-template-columns:1fr 1fr;gap:8px}.card{padding:12px}.card .s{display:none}}
+/* ajouts Mstudio */
+.inclus{display:flex;align-items:center;gap:14px;background:#fff;border:1.5px solid var(--violet);border-radius:20px;padding:14px 18px;box-shadow:0 10px 26px rgba(141,104,250,.15);margin-bottom:18px}
+.inclus img{width:52px;height:52px;border-radius:999px}
+.inclus b{font-family:'Space Grotesk';color:var(--indigo);display:block}
+.inclus span{font-size:14px;color:var(--muted)}
+.inclus .badge{margin-left:auto;background:var(--grad);color:#fff;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.cyc{margin-top:16px;background:#fff;border:1.5px solid var(--line);border-radius:22px;padding:16px 18px;box-shadow:var(--sh);animation:enter .3s}
+.cyc h4{margin:0 0 4px;color:var(--indigo);font-size:17px;display:flex;align-items:center;gap:8px}
+.cyc h4 .ic{color:var(--violet);width:18px;height:18px}
+.cyc p{margin:0 0 12px;font-size:14px;color:var(--muted)}
+.cyc .cards{grid-template-columns:repeat(4,1fr)}
+.cyc .card{align-items:center;text-align:center;padding:14px 10px}
+.cyc .card .s{font-size:12.5px}
+.person.p4{grid-template-columns:1fr 1.3fr 150px 40px}
+.fld select{display:block;width:100%;border:0;outline:0;font:inherit;font-size:16px;color:var(--ink);background:none;padding:4px 0}
+.note{display:flex;gap:12px;align-items:flex-start;background:var(--lilac);border-radius:18px;padding:14px 18px;margin-top:16px;color:#4A4560;font-size:15px}
+.note .ic{color:var(--violet);margin-top:1px}
+.note a{color:var(--violet-deep);font-weight:600}
+.note b{color:var(--indigo)}
+@media (max-width:760px){.cyc .cards{grid-template-columns:repeat(2,1fr)}.person.p4{grid-template-columns:1fr 40px}.person.p4 .fld{grid-column:1}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap in"><img class="logo" src="assets/logo/yelema-logo.png" alt="Yelema"><span class="stepn" id="stepn"></span><div class="prog"><i id="bar"></i></div></div></header>
+<main class="wrap" id="app"></main>
+<footer>Yelema, l'IA pour l'Afrique.</footer>
+<datalist id="startups"><option>Barapay</option><option>Danaya</option><option>Diaspora Connect</option><option>Djoli</option><option>Doo</option><option>Flot</option><option>Jèko</option><option>Revvo</option><option>Waribei</option></datalist>
+<script>window.ICONES={"arrow-left": "<path d=\"m12 19-7-7 7-7\" /> <path d=\"M19 12H5\" />", "arrow-right": "<path d=\"M5 12h14\" /> <path d=\"m12 5 7 7-7 7\" />", "arrow-up-right": "<path d=\"M7 7h10v10\" /> <path d=\"M7 17 17 7\" />", "banknote": "<rect width=\"20\" height=\"12\" x=\"2\" y=\"6\" rx=\"2\" /> <circle cx=\"12\" cy=\"12\" r=\"2\" /> <path d=\"M6 12h.01M18 12h.01\" />", "book-open": "<path d=\"M12 7v14\" /> <path d=\"M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z\" />", "brain-circuit": "<path d=\"M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z\" /> <path d=\"M9 13a4.5 4.5 0 0 0 3-4\" /> <path d=\"M6.003 5.125A3 3 0 0 0 6.401 6.5\" /> <path d=\"M3.477 10.896a4 4 0 0 1 .585-.396\" /> <path d=\"M6 18a4 4 0 0 1-1.967-.516\" /> <path d=\"M12 13h4\" /> <path d=\"M12 18h6a2 2 0 0 1 2 2v1\" /> <path d=\"M12 8h8\" /> <path d=\"M16 8V5a2 2 0 0 1 2-2\" /> <circle cx=\"16\" cy=\"13\" r=\".5\" /> <circle cx=\"18\" cy=\"3\" r=\".5\" /> <circle cx=\"20\" cy=\"21\" r=\".5\" /> <circle cx=\"20\" cy=\"8\" r=\".5\" />", "briefcase": "<path d=\"M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16\" /> <rect width=\"20\" height=\"14\" x=\"2\" y=\"6\" rx=\"2\" />", "building-2": "<path d=\"M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z\" /> <path d=\"M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2\" /> <path d=\"M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2\" /> <path d=\"M10 6h4\" /> <path d=\"M10 10h4\" /> <path d=\"M10 14h4\" /> <path d=\"M10 18h4\" />", "building": "<rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\" ry=\"2\" /> <path d=\"M9 22v-4h6v4\" /> <path d=\"M8 6h.01\" /> <path d=\"M16 6h.01\" /> <path d=\"M12 6h.01\" /> <path d=\"M12 10h.01\" /> <path d=\"M12 14h.01\" /> <path d=\"M16 10h.01\" /> <path d=\"M16 14h.01\" /> <path d=\"M8 10h.01\" /> <path d=\"M8 14h.01\" />", "calculator": "<rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\" /> <line x1=\"8\" x2=\"16\" y1=\"6\" y2=\"6\" /> <line x1=\"16\" x2=\"16\" y1=\"14\" y2=\"18\" /> <path d=\"M16 10h.01\" /> <path d=\"M12 10h.01\" /> <path d=\"M8 10h.01\" /> <path d=\"M12 14h.01\" /> <path d=\"M8 14h.01\" /> <path d=\"M12 18h.01\" /> <path d=\"M8 18h.01\" />", "calendar-check": "<path d=\"M8 2v4\" /> <path d=\"M16 2v4\" /> <rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\" /> <path d=\"M3 10h18\" /> <path d=\"m9 16 2 2 4-4\" />", "calendar": "<path d=\"M8 2v4\" /> <path d=\"M16 2v4\" /> <rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\" /> <path d=\"M3 10h18\" />", "chart-column": "<path d=\"M3 3v16a2 2 0 0 0 2 2h16\" /> <path d=\"M18 17V9\" /> <path d=\"M13 17V5\" /> <path d=\"M8 17v-3\" />", "chart-line": "<path d=\"M3 3v16a2 2 0 0 0 2 2h16\" /> <path d=\"m19 9-5 5-4-4-3 3\" />", "chart-pie": "<path d=\"M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z\" /> <path d=\"M21.21 15.89A10 10 0 1 1 8 2.83\" />", "check": "<path d=\"M20 6 9 17l-5-5\" />", "chevron-down": "<path d=\"m6 9 6 6 6-6\" />", "chevron-up": "<path d=\"m18 15-6-6-6 6\" />", "clock": "<circle cx=\"12\" cy=\"12\" r=\"10\" /> <polyline points=\"12 6 12 12 16 14\" />", "compass": "<path d=\"m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z\" /> <circle cx=\"12\" cy=\"12\" r=\"10\" />", "cpu": "<rect width=\"16\" height=\"16\" x=\"4\" y=\"4\" rx=\"2\" /> <rect width=\"6\" height=\"6\" x=\"9\" y=\"9\" rx=\"1\" /> <path d=\"M15 2v2\" /> <path d=\"M15 20v2\" /> <path d=\"M2 15h2\" /> <path d=\"M2 9h2\" /> <path d=\"M20 15h2\" /> <path d=\"M20 9h2\" /> <path d=\"M9 2v2\" /> <path d=\"M9 20v2\" />", "crown": "<path d=\"M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z\" /> <path d=\"M5 21h14\" />", "database": "<ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\" /> <path d=\"M3 5V19A9 3 0 0 0 21 19V5\" /> <path d=\"M3 12A9 3 0 0 0 21 12\" />", "download": "<path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\" /> <polyline points=\"7 10 12 15 17 10\" /> <line x1=\"12\" x2=\"12\" y1=\"15\" y2=\"3\" />", "factory": "<path d=\"M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z\" /> <path d=\"M17 18h1\" /> <path d=\"M12 18h1\" /> <path d=\"M7 18h1\" />", "file-pen-line": "<path d=\"m18 5-2.414-2.414A2 2 0 0 0 14.172 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2\" /> <path d=\"M21.378 12.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z\" /> <path d=\"M8 18h1\" />", "file-text": "<path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z\" /> <path d=\"M14 2v4a2 2 0 0 0 2 2h4\" /> <path d=\"M10 9H8\" /> <path d=\"M16 13H8\" /> <path d=\"M16 17H8\" />", "files": "<path d=\"M20 7h-3a2 2 0 0 1-2-2V2\" /> <path d=\"M9 18a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h7l4 4v10a2 2 0 0 1-2 2Z\" /> <path d=\"M3 7.6v12.8A1.6 1.6 0 0 0 4.6 22h9.8\" />", "flag": "<path d=\"M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z\" /> <line x1=\"4\" x2=\"4\" y1=\"22\" y2=\"15\" />", "folder-search": "<path d=\"M10.7 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v4.1\" /> <path d=\"m21 21-1.9-1.9\" /> <circle cx=\"17\" cy=\"17\" r=\"3\" />", "gauge": "<path d=\"m12 14 4-4\" /> <path d=\"M3.34 19a10 10 0 1 1 17.32 0\" />", "globe": "<circle cx=\"12\" cy=\"12\" r=\"10\" /> <path d=\"M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20\" /> <path d=\"M2 12h20\" />", "graduation-cap": "<path d=\"M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z\" /> <path d=\"M22 10v6\" /> <path d=\"M6 12.5V16a6 3 0 0 0 12 0v-3.5\" />", "grip-vertical": "<circle cx=\"9\" cy=\"12\" r=\"1\" /> <circle cx=\"9\" cy=\"5\" r=\"1\" /> <circle cx=\"9\" cy=\"19\" r=\"1\" /> <circle cx=\"15\" cy=\"12\" r=\"1\" /> <circle cx=\"15\" cy=\"5\" r=\"1\" /> <circle cx=\"15\" cy=\"19\" r=\"1\" />", "hand-coins": "<path d=\"M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17\" /> <path d=\"m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9\" /> <path d=\"m2 16 6 6\" /> <circle cx=\"16\" cy=\"9\" r=\"2.9\" /> <circle cx=\"6\" cy=\"5\" r=\"3\" />", "hard-hat": "<path d=\"M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5\" /> <path d=\"M14 6a6 6 0 0 1 6 6v3\" /> <path d=\"M4 15v-3a6 6 0 0 1 6-6\" /> <rect x=\"2\" y=\"15\" width=\"20\" height=\"4\" rx=\"1\" />", "hash": "<line x1=\"4\" x2=\"20\" y1=\"9\" y2=\"9\" /> <line x1=\"4\" x2=\"20\" y1=\"15\" y2=\"15\" /> <line x1=\"10\" x2=\"8\" y1=\"3\" y2=\"21\" /> <line x1=\"16\" x2=\"14\" y1=\"3\" y2=\"21\" />", "headset": "<path d=\"M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z\" /> <path d=\"M21 16v2a4 4 0 0 1-4 4h-5\" />", "heart-handshake": "<path d=\"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z\" /> <path d=\"M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66\" /> <path d=\"m18 15-2-2\" /> <path d=\"m15 18-2-2\" />", "heart-pulse": "<path d=\"M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z\" /> <path d=\"M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27\" />", "hotel": "<path d=\"M10 22v-6.57\" /> <path d=\"M12 11h.01\" /> <path d=\"M12 7h.01\" /> <path d=\"M14 15.43V22\" /> <path d=\"M15 16a5 5 0 0 0-6 0\" /> <path d=\"M16 11h.01\" /> <path d=\"M16 7h.01\" /> <path d=\"M8 11h.01\" /> <path d=\"M8 7h.01\" /> <rect x=\"4\" y=\"2\" width=\"16\" height=\"20\" rx=\"2\" />", "info": "<circle cx=\"12\" cy=\"12\" r=\"10\" /> <path d=\"M12 16v-4\" /> <path d=\"M12 8h.01\" />", "key-round": "<path d=\"M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z\" /> <circle cx=\"16.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\" />", "landmark": "<line x1=\"3\" x2=\"21\" y1=\"22\" y2=\"22\" /> <line x1=\"6\" x2=\"6\" y1=\"18\" y2=\"11\" /> <line x1=\"10\" x2=\"10\" y1=\"18\" y2=\"11\" /> <line x1=\"14\" x2=\"14\" y1=\"18\" y2=\"11\" /> <line x1=\"18\" x2=\"18\" y1=\"18\" y2=\"11\" /> <polygon points=\"12 2 20 7 4 7\" />", "layers": "<path d=\"m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z\" /> <path d=\"m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65\" /> <path d=\"m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65\" />", "lightbulb": "<path d=\"M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5\" /> <path d=\"M9 18h6\" /> <path d=\"M10 22h4\" />", "list-checks": "<path d=\"m3 17 2 2 4-4\" /> <path d=\"m3 7 2 2 4-4\" /> <path d=\"M13 6h8\" /> <path d=\"M13 12h8\" /> <path d=\"M13 18h8\" />", "loader-circle": "<path d=\"M21 12a9 9 0 1 1-6.219-8.56\" />", "lock": "<rect width=\"18\" height=\"11\" x=\"3\" y=\"11\" rx=\"2\" ry=\"2\" /> <path d=\"M7 11V7a5 5 0 0 1 10 0v4\" />", "mail": "<rect width=\"20\" height=\"16\" x=\"2\" y=\"4\" rx=\"2\" /> <path d=\"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7\" />", "map-pin": "<path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\" /> <circle cx=\"12\" cy=\"10\" r=\"3\" />", "megaphone": "<path d=\"m3 11 18-5v12L3 14v-3z\" /> <path d=\"M11.6 16.8a3 3 0 1 1-5.8-1.6\" />", "message-circle": "<path d=\"M7.9 20A9 9 0 1 0 4 16.1L2 22Z\" />", "message-square-text": "<path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\" /> <path d=\"M13 8H7\" /> <path d=\"M17 12H7\" />", "microscope": "<path d=\"M6 18h8\" /> <path d=\"M3 22h18\" /> <path d=\"M14 22a7 7 0 1 0 0-14h-1\" /> <path d=\"M9 14h2\" /> <path d=\"M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z\" /> <path d=\"M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3\" />", "package": "<path d=\"M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z\" /> <path d=\"M12 22V12\" /> <path d=\"m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7\" /> <path d=\"m7.5 4.27 9 5.15\" />", "palette": "<circle cx=\"13.5\" cy=\"6.5\" r=\".5\" fill=\"currentColor\" /> <circle cx=\"17.5\" cy=\"10.5\" r=\".5\" fill=\"currentColor\" /> <circle cx=\"8.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\" /> <circle cx=\"6.5\" cy=\"12.5\" r=\".5\" fill=\"currentColor\" /> <path d=\"M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z\" />", "party-popper": "<path d=\"M5.8 11.3 2 22l10.7-3.79\" /> <path d=\"M4 3h.01\" /> <path d=\"M22 8h.01\" /> <path d=\"M15 2h.01\" /> <path d=\"M22 20h.01\" /> <path d=\"m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10\" /> <path d=\"m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.7-.72 1.22-1.43 1.22H17\" /> <path d=\"m11 2 .33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7\" /> <path d=\"M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z\" />", "pen-tool": "<path d=\"M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z\" /> <path d=\"m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18\" /> <path d=\"m2.3 2.3 7.286 7.286\" /> <circle cx=\"11\" cy=\"11\" r=\"2\" />", "pencil-line": "<path d=\"M12 20h9\" /> <path d=\"M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z\" /> <path d=\"m15 5 3 3\" />", "piggy-bank": "<path d=\"M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2V5z\" /> <path d=\"M2 9v1c0 1.1.9 2 2 2h1\" /> <path d=\"M16 11h.01\" />", "plus": "<path d=\"M5 12h14\" /> <path d=\"M12 5v14\" />", "printer": "<path d=\"M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2\" /> <path d=\"M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6\" /> <rect x=\"6\" y=\"14\" width=\"12\" height=\"8\" rx=\"1\" />", "radar": "<path d=\"M19.07 4.93A10 10 0 0 0 6.99 3.34\" /> <path d=\"M4 6h.01\" /> <path d=\"M2.29 9.62A10 10 0 1 0 21.31 8.35\" /> <path d=\"M16.24 7.76A6 6 0 1 0 8.23 16.67\" /> <path d=\"M12 18h.01\" /> <path d=\"M17.99 11.66A6 6 0 0 1 15.77 16.67\" /> <circle cx=\"12\" cy=\"12\" r=\"2\" /> <path d=\"m13.41 10.59 5.66-5.66\" />", "receipt-text": "<path d=\"M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z\" /> <path d=\"M14 8H8\" /> <path d=\"M16 12H8\" /> <path d=\"M13 16H8\" />", "receipt": "<path d=\"M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z\" /> <path d=\"M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8\" /> <path d=\"M12 17.5v-11\" />", "repeat": "<path d=\"m17 2 4 4-4 4\" /> <path d=\"M3 11v-1a4 4 0 0 1 4-4h14\" /> <path d=\"m7 22-4-4 4-4\" /> <path d=\"M21 13v1a4 4 0 0 1-4 4H3\" />", "rocket": "<path d=\"M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z\" /> <path d=\"m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z\" /> <path d=\"M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0\" /> <path d=\"M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5\" />", "rotate-ccw": "<path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\" /> <path d=\"M3 3v5h5\" />", "scale": "<path d=\"m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z\" /> <path d=\"m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z\" /> <path d=\"M7 21h10\" /> <path d=\"M12 3v18\" /> <path d=\"M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2\" />", "search": "<circle cx=\"11\" cy=\"11\" r=\"8\" /> <path d=\"m21 21-4.3-4.3\" />", "send": "<path d=\"M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z\" /> <path d=\"m21.854 2.147-10.94 10.939\" />", "shield-check": "<path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\" /> <path d=\"m9 12 2 2 4-4\" />", "shield": "<path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\" />", "ship": "<path d=\"M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1\" /> <path d=\"M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76\" /> <path d=\"M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6\" /> <path d=\"M12 10v4\" /> <path d=\"M12 2v3\" />", "shopping-basket": "<path d=\"m15 11-1 9\" /> <path d=\"m19 11-4-7\" /> <path d=\"M2 11h20\" /> <path d=\"m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4\" /> <path d=\"M4.5 15.5h15\" /> <path d=\"m5 11 4-7\" /> <path d=\"m9 11 1 9\" />", "shopping-cart": "<circle cx=\"8\" cy=\"21\" r=\"1\" /> <circle cx=\"19\" cy=\"21\" r=\"1\" /> <path d=\"M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12\" />", "smile": "<circle cx=\"12\" cy=\"12\" r=\"10\" /> <path d=\"M8 14s1.5 2 4 2 4-2 4-2\" /> <line x1=\"9\" x2=\"9.01\" y1=\"9\" y2=\"9\" /> <line x1=\"15\" x2=\"15.01\" y1=\"9\" y2=\"9\" />", "sparkles": "<path d=\"M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z\" /> <path d=\"M20 3v4\" /> <path d=\"M22 5h-4\" /> <path d=\"M4 17v2\" /> <path d=\"M5 18H3\" />", "store": "<path d=\"m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7\" /> <path d=\"M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8\" /> <path d=\"M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4\" /> <path d=\"M2 7h20\" /> <path d=\"M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7\" />", "target": "<circle cx=\"12\" cy=\"12\" r=\"10\" /> <circle cx=\"12\" cy=\"12\" r=\"6\" /> <circle cx=\"12\" cy=\"12\" r=\"2\" />", "timer": "<line x1=\"10\" x2=\"14\" y1=\"2\" y2=\"2\" /> <line x1=\"12\" x2=\"15\" y1=\"14\" y2=\"11\" /> <circle cx=\"12\" cy=\"14\" r=\"8\" />", "trending-up": "<polyline points=\"22 7 13.5 15.5 8.5 10.5 2 17\" /> <polyline points=\"16 7 22 7 22 13\" />", "truck": "<path d=\"M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2\" /> <path d=\"M15 18H9\" /> <path d=\"M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14\" /> <circle cx=\"17\" cy=\"18\" r=\"2\" /> <circle cx=\"7\" cy=\"18\" r=\"2\" />", "user-check": "<path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\" /> <circle cx=\"9\" cy=\"7\" r=\"4\" /> <polyline points=\"16 11 18 13 22 9\" />", "user-search": "<circle cx=\"10\" cy=\"7\" r=\"4\" /> <path d=\"M10.3 15H7a4 4 0 0 0-4 4v2\" /> <circle cx=\"17\" cy=\"17\" r=\"3\" /> <path d=\"m21 21-1.9-1.9\" />", "user": "<path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\" /> <circle cx=\"12\" cy=\"7\" r=\"4\" />", "users": "<path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\" /> <circle cx=\"9\" cy=\"7\" r=\"4\" /> <path d=\"M22 21v-2a4 4 0 0 0-3-3.87\" /> <path d=\"M16 3.13a4 4 0 0 1 0 7.75\" />", "wallet": "<path d=\"M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1\" /> <path d=\"M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4\" />", "wheat": "<path d=\"M2 22 16 8\" /> <path d=\"M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z\" /> <path d=\"M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z\" /> <path d=\"M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z\" /> <path d=\"M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z\" /> <path d=\"M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z\" /> <path d=\"M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z\" /> <path d=\"M19.47 9.47 21 11l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L13 11l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z\" />", "workflow": "<rect width=\"8\" height=\"8\" x=\"3\" y=\"3\" rx=\"2\" /> <path d=\"M7 11v4a2 2 0 0 0 2 2h4\" /> <rect width=\"8\" height=\"8\" x=\"13\" y=\"13\" rx=\"2\" />", "wrench": "<path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\" />", "x": "<path d=\"M18 6 6 18\" /> <path d=\"m6 6 12 12\" />", "zap": "<path d=\"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z\" />", "smartphone": "<rect width=\"14\" height=\"20\" x=\"5\" y=\"2\" rx=\"2\" ry=\"2\" /><path d=\"M12 18h.01\" />", "monitor": "<rect width=\"20\" height=\"14\" x=\"2\" y=\"3\" rx=\"2\" /><line x1=\"8\" x2=\"16\" y1=\"21\" y2=\"21\" /><line x1=\"12\" x2=\"12\" y1=\"17\" y2=\"21\" />"};</script>
+<script>
+(function(){
+const I = window.ICONES, app = document.getElementById('app');
+const ic = n => `<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${I[n] || I.wrench}</svg></span>`;
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const av = f => 'assets/experts/' + f + '.png';
+const lg = f => 'assets/logos/' + f;
+
+const CYCLES = [
+  {id:'commercial', n:'Commercial', i:'trending-up', s:'Trouver et signer des clients', ex:[['kouassi','Kouassi','Prospection et relances'],['sena','Sèna','Offres et contrats'],['aminata','Aminata','Clients récurrents'],['seydou','Seydou','Veille commerciale']], doc:['Catalogue et grille de prix','Modèles de devis, liste des clients et des prospects']},
+  {id:'marketing', n:'Marketing', i:'megaphone', s:'Faire connaître la marque', ex:[['fatima','Fatima','Réseaux sociaux'],['koffi','Koffi','Visuels et vidéos'],['aya','Aya','Influence et créateurs'],['yao','Yao','Veille et rapports']], doc:['Logos en haute définition et charte graphique','Liens du site et des réseaux sociaux']},
+  {id:'rh', n:'RH', i:'users', s:'Recruter et gérer l\'équipe', ex:[['adjoua','Adjoua','Recrutement'],['fatou','Fatou','Paie et administration'],['lamine','Lamine','Intégration et formation'],['cheikh','Cheikh','Climat social']], doc:['Organigramme et fiches de poste','Contrats types et calendrier de paie']},
+  {id:'finance', n:'Finance', i:'calculator', s:'Tenir les comptes et la trésorerie', ex:[['mamadou','Mamadou','Comptabilité et pilotage'],['kadiatou','Kadiatou','Achats et fournisseurs'],['daouda','Daouda','Facturation et trésorerie'],['rokia','Rokia','Contrôle des dépenses']], doc:['Plan comptable et derniers états financiers','Modèles de factures et relevés bancaires']},
+  {id:'service', n:'Service client', i:'headset', s:'Répondre et fidéliser', ex:[['awa','Awa','Réponse aux clients'],['akissi','Akissi','Satisfaction et fidélité'],['ousmane','Ousmane','Qualité du service'],['malick','Malick','Après-vente']], doc:['Questions fréquentes et réponses types','Historique des demandes clients']},
+  {id:'ops', n:'Opérations', i:'truck', s:'Stocks, achats et livraisons', ex:[['salif','Salif','Stock et logistique'],['yacouba','Yacouba','Achats et import'],['sidiki','Sidiki','Livraisons et flotte'],['assita','Assita','Production et qualité']], doc:['Procédures d\'exploitation','Liste des fournisseurs et état des stocks']},
+  {id:'invest', n:'Investissement', i:'piggy-bank', s:'Levée de fonds et dossiers', ex:[['alioune','Alioune','Analyse des dossiers'],['fifame','Fifamè','Sourcing'],['ibrahim','Ibrahim','Juridique'],['aicha','Aïcha','Suivi du portefeuille']], doc:['Deck et data room de la startup','Liste des investisseurs suivis']}
+];
+const C = id => CYCLES.find(c => c.id === id);
+const NOM = {djeneba:'Djénéba'}; CYCLES.forEach(c => c.ex.forEach(e => NOM[e[0]] = e[1]));
+const MAIL = [['Google Workspace','googleworkspace.svg','Gmail professionnel'],['Microsoft 365','microsoft.svg','Outlook professionnel'],['Gmail personnel','gmail.svg','Adresse en gmail.com'],['Autre','','Précisez-le ensuite']];
+const DOCS = [['Google Drive','drive.svg'],['OneDrive','microsoftonedrive.svg'],['SharePoint','microsoftsharepoint.svg'],['Dropbox','dropbox.svg'],['Notion','notion.png'],['WhatsApp et emails','whatsapp.svg']];
+const TOOLS = [['Notion','notion.png'],['Slack','slack.png'],['WhatsApp','whatsapp.svg'],['Google Sheets','sheets.svg'],['Excel','excel.png'],['Teams','teams.png'],['HubSpot','hubspot.png'],['Odoo','odoo.svg'],['Sage','sage.png'],['QuickBooks','quickbooks.png'],['Canva','canva.png'],['Figma','figma.svg'],['LinkedIn','linkedin.png'],['Facebook et Instagram','meta.svg'],['TikTok','tiktok.svg'],['Buffer','buffer.svg']];
+const AUTRES_IA = [['ChatGPT','ia-chatgpt.png'],['Gemini','ia-gemini.png']];
+
+const st = { startup:'', admin:'', fonction:'', email:'', whatsapp:'', taille:null, cycles:[], experts:['djeneba'], mode:null, gens:[{n:'',e:'',r:'Dirigeant'}], cyclesEquipe:[], claude:null, claudeEmail:'', autresIa:[], mail:null, mailAutre:'', docs:null, it:null, itNom:'', interdit:'', outils:[], autresOutils:[], prets:{}, dossier:'', presents:'', taches:['','',''], tel:null, remarque:'' };
+const ETAPES = ['accueil','startup','cycles','comptes','claude','acces','outils','preparer','seance','fin'];
+let cur = 0;
+const cardSel = ok => ok ? ' sel' : '';
+const tick = `<span class="tick">${ic('check')}</span>`;
+const equipe = () => st.mode === 'duo' || st.mode === 'perso';
+
+function listePrep(){
+  const l = [];
+  l.push({k:'claude', t:'Votre compte Claude Pro ou Max, actif avant le jour J', s:'Nous le branchons sur votre espace Yelema avant la séance.', who:[], kind:'compte', link:['https://claude.ai','Ouvrir claude.ai']});
+  l.push({k:'doc-direction', t:'Vos objectifs du trimestre et votre organigramme', s:'Djénéba s\'en sert pour orchestrer vos Experts.', who:['djeneba'], kind:'doc'});
+  st.cycles.forEach(id => { const c = C(id); const who = c.ex.map(e => e[0]).filter(e => st.experts.includes(e)); if (who.length) l.push({k:'doc-'+id, t:c.doc[0], s:c.doc[1], who, kind:'doc'}); });
+  l.push({k:'exa', t:'Un compte gratuit sur exa.ai, avec sa clé API', s:'La clé sert à la recherche web de vos Experts. Dix minutes suffisent.', link:['https://exa.ai','Créer le compte'], kind:'compte', who:[]});
+  if (st.experts.includes('koffi')) l.push({k:'magnific', t:'Une clé API Magnific', s:'Pour les visuels de Koffi.', who:['koffi'], kind:'compte'});
+  if (st.experts.includes('fatima')) l.push({k:'meta', t:'L\'accès administrateur de vos pages Facebook et Instagram', s:'', who:['fatima'], kind:'compte'});
+  l.push({k:'poste', t:'Un ordinateur avec votre messagerie et vos documents ouverts', s:'Et votre téléphone à portée de main.', kind:'jour', who:[]});
+  return l;
+}
+
+const ecrans = {
+accueil(){ return `<section class="screen on"><div class="hero" style="margin:0 -20px;padding-left:20px;padding-right:20px"><div class="wrap" style="padding:0;position:relative;z-index:1">
+  <div class="eyebrow">Yelema x Mstudio</div>
+  <h1>Préparez l'arrivée de vos <em>Experts IA</em>.</h1>
+  <p>Ce formulaire est réservé aux startups Mstudio. Vos réponses nous disent quels Experts installer, qui se connecte et quels outils brancher, pour que la séance serve à travailler.</p>
+  <div class="perks"><span>${ic('timer')}10 minutes</span><span>${ic('list-checks')}Un écran par sujet</span><span>${ic('lock')}Aucun mot de passe demandé</span></div>
+  <button class="btn btn-p btn-big" data-a="suiv">Commencer ${ic('arrow-right')}</button></div></div>
+  <div class="etapes"><div class="etape"><div class="chip">${ic('sparkles')}</div><b>Vos Experts</b><p>Les cycles métier qui vous intéressent, et les Experts de chacun.</p></div>
+  <div class="etape"><div class="chip">${ic('key-round')}</div><b>Vos accès</b><p>Qui se connecte, avec quel email, et votre compte Claude.</p></div>
+  <div class="etape"><div class="chip">${ic('workflow')}</div><b>Vos outils</b><p>Ce que l'équipe utilise déjà, et ce qu'il faut préparer.</p></div></div></section>`; },
+
+startup(){ return `<section class="screen on"><div class="q-ic">${ic('rocket')}</div><h2>Votre startup</h2><p class="lede">L'espace Yelema est créé au nom de la startup. La personne indiquée ici en est l'administratrice.</p>
+  <div class="form">
+  <div class="fld full" data-f="startup"><label for="startup">Nom de la startup</label><input id="startup" list="startups" value="${esc(st.startup)}" autocomplete="organization"></div>
+  <div class="fld"><label for="admin">Administrateur du compte</label><input id="admin" value="${esc(st.admin)}" placeholder="Prénom et nom" autocomplete="name"></div>
+  <div class="fld"><label for="fonction">Sa fonction</label><input id="fonction" value="${esc(st.fonction)}" placeholder="CEO, COO…"></div>
+  <div class="fld"><label for="email">Son email professionnel</label><input id="email" type="email" value="${esc(st.email)}" autocomplete="email"></div>
+  <div class="fld"><label for="whatsapp">Son numéro WhatsApp</label><input id="whatsapp" type="tel" value="${esc(st.whatsapp)}" placeholder="+225 …" autocomplete="tel"></div>
+  </div>
+  <div class="sub">Combien de personnes dans l'équipe ?</div>
+  <div class="cards c4" id="taille">${['1 à 5','6 à 15','16 à 50','Plus de 50'].map(m => `<button class="card row-card${cardSel(st.taille===m)}" data-taille="${m}">${tick}<div class="chip">${ic('users')}</div><span class="tx t">${m}</span></button>`).join('')}</div></section>`; },
+
+cycles(){ return `<section class="screen on"><div class="q-ic">${ic('sparkles')}</div><h2>Vos cycles métier</h2><p class="lede">Choisissez les cycles qui vous intéressent. Chaque cycle réunit quatre Experts : gardez ceux dont vous avez besoin.</p>
+  <div class="inclus"><img src="${av('djeneba')}" alt=""><div><b>Djénéba, direction</b><span>Elle orchestre vos Experts et vous rend compte.</span></div><span class="badge">Incluse</span></div>
+  <div class="cards c4" id="cyc">${CYCLES.map(c => `<button class="card${cardSel(st.cycles.includes(c.id))}" data-cyc="${c.id}">${tick}<div class="chip">${ic(c.i)}</div><span class="t">${c.n}</span><span class="s">${c.s}</span></button>`).join('')}</div>
+  <div id="detail">${st.cycles.map(blocCycle).join('')}</div></section>`; },
+
+comptes(){ const cy = st.cycles.map(C); return `<section class="screen on"><div class="q-ic">${ic('key-round')}</div><h2>Qui se connecte</h2><p class="lede">Un compte dirigeant garde ses sujets pour lui. Un compte équipe est partagé par ceux qui travaillent avec les Experts au quotidien.</p>
+  <div class="cards c4" id="mode">${[['dirigeant','crown','Un compte dirigeant','Le fondateur seul'],['duo','users','Dirigeant et équipe','Deux espaces séparés'],['perso','user-check','Un compte par personne','Chacun a son accès'],['nsp','compass','Pas encore décidé','On en parle en séance']].map(m => `<button class="card${cardSel(st.mode===m[0])}" data-mode="${m[0]}">${tick}<div class="chip">${ic(m[1])}</div><span class="t">${m[2]}</span><span class="s">${m[3]}</span></button>`).join('')}</div>
+  <div class="sub">Les emails qui auront accès <small>L'invitation part à chacune de ces adresses : c'est leur identifiant de connexion.</small></div>
+  <div class="people" id="people">${st.gens.map((g,i) => `<div class="person p4"><div class="fld"><label>Nom</label><input data-g="n" data-i="${i}" value="${esc(g.n)}"></div><div class="fld"><label>Email de connexion</label><input type="email" data-g="e" data-i="${i}" value="${esc(g.e)}"></div><div class="fld"><label>Compte</label><select data-g="r" data-i="${i}">${['Dirigeant','Équipe'].map(r => `<option${g.r===r?' selected':''}>${r}</option>`).join('')}</select></div>${st.gens.length>1 ? `<button class="rm" data-rm="${i}" aria-label="Retirer">${ic('x')}</button>` : '<span></span>'}</div>`).join('')}</div>
+  <button class="addp" data-a="addp">${ic('plus')}Ajouter une personne</button>
+  <div class="reveal${equipe() && cy.length ? ' on' : ''}" id="eqbox"><div class="sub">Les cycles visibles par l'équipe <small>Les autres restent dans l'espace du dirigeant.</small></div>
+  <div class="logos" id="cyceq">${cy.map(c => `<button class="logo-b${st.cyclesEquipe.includes(c.id)?' on':''}" data-cyceq="${c.id}">${ic(c.i)}${c.n}</button>`).join('')}</div></div></section>`; },
+
+claude(){ return `<section class="screen on"><div class="q-ic">${ic('brain-circuit')}</div><h2>Votre compte Claude</h2><p class="lede">Vos Experts travaillent avec un compte Claude au nom de votre startup. Il doit être branché sur votre espace <b>avant le jour de l'installation</b>.</p>
+  <div class="cards c4" id="claude">${[['Max','zap','Claude Max','Déjà actif'],['Pro','check','Claude Pro','Déjà actif'],['Non','plus','Pas encore','Nous vous guidons'],['nsp','info','Je ne sais pas','Nous vérifions avec vous']].map(m => `<button class="card${cardSel(st.claude===m[0])}" data-claude="${m[0]}">${tick}<div class="lg">${m[0]==='Max'||m[0]==='Pro' ? `<img src="${lg('ia-claude.png')}" alt="">` : ic(m[1])}</div><span class="t">${m[2]}</span><span class="s">${m[3]}</span></button>`).join('')}</div>
+  <div class="reveal${(st.claude==='Max'||st.claude==='Pro')?' on':''}" id="clbox"><div class="fld" style="max-width:560px"><label for="clmail">Email du compte Claude</label><input id="clmail" type="email" value="${esc(st.claudeEmail)}"></div></div>
+  <div class="reveal${(st.claude==='Non'||st.claude==='nsp')?' on':''}" id="clnote"><div class="note">${ic('info')}<span>Créez le compte sur <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> avec l'email de la startup, puis passez à la formule <b>Pro</b> ou <b>Max</b>. Nous le branchons ensemble avant la séance.</span></div></div>
+  <div class="sub">D'autres comptes d'IA déjà payés ? <small>Facultatif</small></div>
+  <div class="logos" id="ias">${AUTRES_IA.map(t => `<button class="logo-b${st.autresIa.includes(t[0])?' on':''}" data-ia="${t[0]}"><img src="${lg(t[1])}" alt="">${t[0]}</button>`).join('')}<button class="logo-b${st.autresIa.includes('Aucun')?' on':''}" data-ia="Aucun">${ic('x')}Aucun</button></div></section>`; },
+
+acces(){ return `<section class="screen on"><div class="q-ic">${ic('mail')}</div><h2>Messagerie et documents</h2><p class="lede">Vos Experts se connectent à votre messagerie et à vos documents pendant la séance.</p>
+  <div class="sub">Votre messagerie au travail</div>
+  <div class="cards c4" id="mail">${MAIL.map(m => `<button class="card${cardSel(st.mail===m[0])}" data-mail="${m[0]}">${tick}<div class="lg">${m[1] ? `<img src="${lg(m[1])}" alt="">` : ic('mail')}</div><span class="t">${m[0]}</span><span class="s">${m[2]}</span></button>`).join('')}</div>
+  <div class="reveal${st.mail==='Autre'?' on':''}" id="mailautre"><input class="mini-in" id="mailautre-in" placeholder="Laquelle ?" value="${esc(st.mailAutre)}"></div>
+  <div class="sub">Où sont rangés vos documents</div>
+  <div class="cards c3" id="docs">${DOCS.map(m => `<button class="card row-card${cardSel(st.docs===m[0])}" data-docs="${m[0]}">${tick}<div class="lg"><img src="${lg(m[1])}" alt=""></div><span class="tx t">${m[0]}</span></button>`).join('')}</div>
+  <div class="sub">La double authentification ou un administrateur bloque-t-il les applications extérieures ?</div>
+  <div class="cards c3" id="it">${[['non','check','Non'],['oui','shield','Oui'],['nsp','info','Je ne sais pas']].map(m => `<button class="card row-card${cardSel(st.it===m[0])}" data-it="${m[0]}">${tick}<div class="chip">${ic(m[1])}</div><span class="tx t">${m[2]}</span></button>`).join('')}</div>
+  <div class="reveal${(st.it==='oui'||st.it==='nsp')?' on':''}" id="itbox"><div class="fld" style="max-width:560px;margin-top:6px"><label for="itnom">Qui gère ces accès (nom et email)</label><input id="itnom" value="${esc(st.itNom)}"></div></div>
+  <div class="sub">Ce que vos Experts ne doivent pas voir <small>Facultatif : un dossier, une boîte mail, un sujet sensible.</small></div>
+  <div class="fld" style="max-width:640px"><label for="interdit">À exclure</label><textarea id="interdit" rows="2">${esc(st.interdit)}</textarea></div></section>`; },
+
+outils(){ return `<section class="screen on"><div class="q-ic">${ic('workflow')}</div><h2>Vos outils</h2><p class="lede">Touchez ceux que l'équipe utilise déjà. Nous choisissons ensemble ce qu'on branche en premier.</p>
+  <div class="logos" id="logos">${TOOLS.map(t => `<button class="logo-b${st.outils.includes(t[0])?' on':''}" data-outil="${esc(t[0])}"><img src="${lg(t[1])}" alt="">${t[0]}</button>`).join('')}${st.autresOutils.map(o => `<button class="logo-b on" data-outil="${esc(o)}">${ic('wrench')}${esc(o)}</button>`).join('')}</div>
+  <div class="addrow"><input class="mini-in" id="outil-in" placeholder="Un autre outil ? (CRM, banque, app métier…)"><button class="btn btn-g" style="padding:10px 18px" data-a="addtool">${ic('plus')}Ajouter</button></div></section>`; },
+
+preparer(){ const l = listePrep(); return `<section class="screen on"><div class="q-ic">${ic('list-checks')}</div><h2>À préparer</h2><p class="lede">Votre liste suit vos cycles. Cochez ce qui est déjà prêt : nous relançons le reste la veille.</p>
+  <div class="prep">${l.map(x => `<button class="pi${st.prets[x.k]?' on':''}" data-prep="${x.k}"><span class="box">${ic('check')}</span><span class="tx"><b>${x.t}</b>${x.s ? `<span>${x.s}</span>` : ''}${x.link ? `<span><a href="${x.link[0]}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${x.link[1]}</a></span>` : ''}</span>${x.who.length ? `<span class="who">${x.who.map(w => `<img src="${av(w)}" alt="${NOM[w]}">`).join('')}</span>` : ''}</button>`).join('')}</div>
+  <div class="sub">Un dossier partagé avec vos documents ? <small>Facultatif</small></div>
+  <div class="fld" style="max-width:560px"><label for="dossier">Lien du dossier</label><input id="dossier" value="${esc(st.dossier)}" placeholder="https://"></div></section>`; },
+
+seance(){ return `<section class="screen on"><div class="q-ic">${ic('calendar-check')}</div><h2>La séance d'installation</h2><p class="lede">Dernier écran. Dites-nous ce que vous voulez confier en premier.</p>
+  <div class="sub">Les trois tâches à confier en premier</div>
+  <div class="tasks">${st.taches.map((t,i) => `<div class="task"><span class="n">${i+1}</span><div class="fld"><input data-t="${i}" value="${esc(t)}" placeholder="${['Par exemple : relancer les prospects du mois','Par exemple : préparer le reporting investisseurs','Par exemple : publier trois posts LinkedIn par semaine'][i]}"></div></div>`).join('')}</div>
+  <div class="sub">Qui sera présent, en plus de l'administrateur ? <small>Facultatif</small></div>
+  <div class="fld" style="max-width:640px"><label for="presents">Noms et fonctions</label><input id="presents" value="${esc(st.presents)}"></div>
+  <div class="sub">Le téléphone des futurs utilisateurs</div>
+  <div class="cards c3" id="tel">${[['iPhone','smartphone'],['Android','smartphone'],['Les deux','users']].map(m => `<button class="card row-card${cardSel(st.tel===m[0])}" data-tel="${m[0]}">${tick}<div class="chip">${ic(m[1])}</div><span class="tx t">${m[0]}</span></button>`).join('')}</div>
+  <div class="sub">Autre chose à nous dire ? <small>Une contrainte, une question, un sujet urgent.</small></div>
+  <div class="fld" style="max-width:640px"><label for="remarque">Votre message</label><textarea id="remarque" rows="3">${esc(st.remarque)}</textarea></div></section>`; },
+
+fin(){ const rest = listePrep().filter(x => !st.prets[x.k] && x.kind !== 'jour'); const noms = st.experts.map(e => NOM[e]).join(', ').replace(/, ([^,]*)$/, ' et $1');
+  return `<section class="screen on"><div class="done"><div class="ok">${ic('check')}</div><div class="eyebrow">Merci ${esc(st.admin.split(' ')[0] || '')}</div><h2>C'est envoyé</h2>
+  <p class="lede">Nous préparons l'installation de ${noms} chez ${esc(st.startup)}.</p>
+  <div class="next"><div class="etape"><div class="chip">${ic('brain-circuit')}</div><b>Votre compte Claude</b><p>Nous le branchons avec vous avant la séance.</p></div>
+  <div class="etape"><div class="chip">${ic('mail')}</div><b>Les invitations</b><p>Elles partent aux emails que vous avez indiqués.</p></div>
+  <div class="etape"><div class="chip">${ic('rocket')}</div><b>Le jour J</b><p>Vos Experts travaillent pour vous à la fin de la séance.</p></div></div>
+  ${rest.length ? `<div class="remind"><b>Encore à préparer</b><ul>${rest.map(x => `<li>${x.t}</li>`).join('')}</ul></div>` : `<div class="remind"><b>Tout est prêt de votre côté.</b></div>`}
+  <p class="legend" id="envoi-note"></p></div></section>`; }
+};
+
+function blocCycle(id){ const c = C(id); return `<div class="cyc" data-bloc="${id}"><h4>${ic(c.i)}${c.n}</h4><p>Touchez un Expert pour le retirer.</p><div class="cards">${c.ex.map(e => `<button class="card${cardSel(st.experts.includes(e[0]))}" data-ex="${e[0]}">${tick}<img class="av" src="${av(e[0])}" alt=""><span class="t">${e[1]}</span><span class="s">${e[2]}</span></button>`).join('')}</div></div>`; }
+function titreEtape(){ return cur > 0 && cur < ETAPES.length - 1 ? `Étape ${cur} sur ${ETAPES.length - 2}` : ''; }
+function nav(){
+  if (cur === 0 || cur === ETAPES.length - 1) return '';
+  const dernier = cur === ETAPES.length - 2;
+  return `<div class="err" id="err"></div><div class="nav"><button class="btn btn-g" data-a="prec">${ic('arrow-left')}Retour</button><button class="btn btn-p" data-a="${dernier?'envoyer':'suiv'}" id="go">${dernier ? 'Envoyer' : 'Continuer'}${ic(dernier ? 'send' : 'arrow-right')}</button></div>`;
+}
+function rendre(){
+  app.innerHTML = ecrans[ETAPES[cur]]();
+  const sc = app.querySelector('.screen'); if (cur > 0 && cur < ETAPES.length - 1) sc.insertAdjacentHTML('beforeend', nav());
+  document.getElementById('bar').style.width = (cur === ETAPES.length - 1 ? 100 : Math.round(cur / (ETAPES.length - 2) * 100)) + '%';
+  document.getElementById('stepn').textContent = titreEtape();
+  window.scrollTo({top:0});
+}
+function lire(){
+  const g = id => { const e = document.getElementById(id); return e ? e.value.trim() : null; };
+  const m = ETAPES[cur];
+  if (m === 'startup') { st.startup = g('startup'); st.admin = g('admin'); st.fonction = g('fonction'); st.email = g('email'); st.whatsapp = g('whatsapp'); if (!st.gens[0].n && !st.gens[0].e) { st.gens[0].n = st.admin; st.gens[0].e = st.email; } }
+  if (m === 'comptes') app.querySelectorAll('[data-g]').forEach(i => { st.gens[+i.dataset.i][i.dataset.g] = i.value.trim(); });
+  if (m === 'claude') { const v = g('clmail'); if (v !== null) st.claudeEmail = v; }
+  if (m === 'acces') { const a = g('mailautre-in'); if (a !== null) st.mailAutre = a; st.itNom = g('itnom') || ''; st.interdit = g('interdit') || ''; }
+  if (m === 'preparer') st.dossier = g('dossier') || '';
+  if (m === 'seance') { app.querySelectorAll('[data-t]').forEach(i => { st.taches[+i.dataset.t] = i.value.trim(); }); st.presents = g('presents') || ''; st.remarque = g('remarque') || ''; }
+}
+function marquer(id, mal){ const e = document.getElementById(id); if (e) e.closest('.fld').classList.toggle('bad', mal); return mal; }
+const okMail = v => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v || '');
+function verifier(){
+  lire(); const m = ETAPES[cur]; let msg = '';
+  if (m === 'startup') {
+    const b = [marquer('startup', !st.startup), marquer('admin', !st.admin), marquer('email', !okMail(st.email)), marquer('whatsapp', st.whatsapp.replace(/\D/g,'').length < 8)];
+    if (b.some(Boolean)) msg = 'Complétez les champs en rouge : startup, administrateur, une adresse email valide et un numéro WhatsApp.';
+    else if (!st.taille) msg = 'Indiquez la taille de l\'équipe.';
+  }
+  if (m === 'cycles' && !st.cycles.length) msg = 'Choisissez au moins un cycle métier.';
+  if (m === 'comptes') { if (!st.mode) msg = 'Dites-nous comment organiser les accès.'; else if (!st.gens.some(g => okMail(g.e))) msg = 'Indiquez au moins un email de connexion valide.'; else if (st.gens.some(g => g.e && !okMail(g.e))) msg = 'Un des emails n\'est pas valide.'; else if (equipe() && !st.gens.some(g => g.r === 'Équipe' && g.e)) msg = 'Ajoutez au moins un email pour le compte équipe.'; }
+  if (m === 'claude' && !st.claude) msg = 'Dites-nous si vous avez déjà un compte Claude.';
+  if (m === 'acces') { if (!st.mail) msg = 'Choisissez votre messagerie.'; else if (!st.docs) msg = 'Choisissez où sont rangés vos documents.'; else if (!st.it) msg = 'Répondez à la question sur les applications extérieures.'; }
+  if (m === 'seance' && !st.taches.some(Boolean)) msg = 'Indiquez au moins une tâche à confier.';
+  const e = document.getElementById('err'); if (e) e.textContent = msg; return !msg;
+}
+function charge(){
+  const l = listePrep(), pret = l.filter(x => st.prets[x.k]).map(x => x.t), reste = l.filter(x => !st.prets[x.k]).map(x => x.t);
+  const parCycle = ['Direction : Djénéba'].concat(st.cycles.map(id => { const c = C(id); return c.n + ' : ' + c.ex.filter(e => st.experts.includes(e[0])).map(e => e[1]).join(', '); }));
+  return {
+    _subject: 'Avant installation Yelema x Mstudio : ' + st.startup, _template: 'table', _captcha: 'false', Page: 'Formulaire Yelema x Mstudio (leslita06)',
+    'Startup': st.startup, 'Taille de l\'équipe': st.taille, 'Administrateur': st.admin + (st.fonction ? ', ' + st.fonction : ''), 'Email administrateur': st.email, 'WhatsApp': st.whatsapp,
+    'Cycles et Experts': parCycle.join(' ; '),
+    'Organisation des accès': ({dirigeant:'Un compte dirigeant',duo:'Un compte dirigeant et un compte équipe',perso:'Un compte par personne',nsp:'Pas encore décidé'})[st.mode],
+    'Emails de connexion': st.gens.filter(g => g.e).map(g => (g.n ? g.n + ', ' : '') + g.e + ' (' + g.r + ')').join(' ; '),
+    'Cycles visibles par l\'équipe': equipe() ? st.cyclesEquipe.map(id => C(id).n).join(', ') : '',
+    'Compte Claude': ({Max:'Claude Max',Pro:'Claude Pro',Non:'Pas encore',nsp:'Ne sait pas'})[st.claude] + (st.claudeEmail ? ' : ' + st.claudeEmail : ''),
+    'Autres comptes IA': st.autresIa.join(', '),
+    'Messagerie': st.mail + (st.mailAutre ? ' : ' + st.mailAutre : ''), 'Documents rangés dans': st.docs,
+    'Blocage des applications': ({non:'Non',oui:'Oui',nsp:'Ne sait pas'})[st.it], 'Contact accès': st.itNom, 'À exclure': st.interdit,
+    'Outils utilisés': st.outils.concat(st.autresOutils).join(', '),
+    'Déjà prêt': pret.join(' ; '), 'Pas encore prêt': reste.join(' ; '), 'Dossier partagé': st.dossier,
+    'Trois premières tâches': st.taches.filter(Boolean).map((t,i) => (i+1) + '. ' + t).join(' ; '), 'Présents à la séance': st.presents, 'Téléphones': st.tel || '', 'Message': st.remarque
+  };
+}
+function envoyer(b){
+  if (!verifier()) return;
+  const c = charge(); b.disabled = true; b.textContent = 'Envoi en cours…';
+  const fini = (ok) => { cur = ETAPES.length - 1; rendre(); const n = document.getElementById('envoi-note'); if (!ok && n) { const corps = Object.entries(c).filter(([k]) => k[0] !== '_' && k !== 'Page').map(([k,v]) => v ? k + ' : ' + v : '').filter(Boolean).join('\n'); n.innerHTML = 'Votre envoi automatique a échoué. <a href="mailto:contact@yelema.ai?subject=' + encodeURIComponent(c._subject) + '&body=' + encodeURIComponent(corps) + '" style="color:var(--violet-deep);font-weight:600">Envoyez-nous vos réponses par email</a>.'; } };
+  const tir = () => fetch('https://formsubmit.co/ajax/contact@yelema.ai', { method:'POST', headers:{'Content-Type':'application/json', Accept:'application/json'}, body: JSON.stringify(c) })
+    .then(r => r.json()).then(x => { if (String(x && x.success) !== 'true') throw 0; });
+  tir().catch(() => new Promise(r => setTimeout(r, 1500)).then(tir)).then(() => fini(true)).catch(() => fini(false));
+}
+app.addEventListener('change', e => { if (e.target.matches('select[data-g]')) { lire(); document.getElementById('eqbox'); } });
+app.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  const d = b.dataset, a = d.a, err = document.getElementById('err'); if (err) err.textContent = '';
+  if (a === 'prec') { lire(); cur = Math.max(0, cur - 1); return rendre(); }
+  if (a === 'suiv') { if (cur === 0 || verifier()) { cur++; rendre(); } return; }
+  if (a === 'envoyer') return envoyer(b);
+  if (a === 'addp') { lire(); st.gens.push({n:'',e:'',r: equipe() ? 'Équipe' : 'Dirigeant'}); return rendre(); }
+  if (a === 'addtool') { const i = document.getElementById('outil-in'), v = i.value.trim(); if (!v) return; if (!st.autresOutils.includes(v)) st.autresOutils.push(v); lire(); return rendre(); }
+  if (d.rm !== undefined) { lire(); st.gens.splice(+d.rm, 1); return rendre(); }
+  const un = (cle, val, groupe) => { st[cle] = val; app.querySelectorAll(groupe + ' .card').forEach(c => c.classList.toggle('sel', c === b)); };
+  if (d.taille) return un('taille', d.taille, '#taille');
+  if (d.cyc) { const c = C(d.cyc), i = st.cycles.indexOf(d.cyc), ids = c.ex.map(x => x[0]);
+    if (i < 0) { st.cycles.push(d.cyc); ids.forEach(x => { if (!st.experts.includes(x)) st.experts.push(x); }); document.getElementById('detail').insertAdjacentHTML('beforeend', blocCycle(d.cyc)); }
+    else { st.cycles.splice(i, 1); st.experts = st.experts.filter(x => !ids.includes(x)); st.cyclesEquipe = st.cyclesEquipe.filter(x => x !== d.cyc); const bl = app.querySelector(`[data-bloc="${d.cyc}"]`); if (bl) bl.remove(); }
+    return b.classList.toggle('sel'); }
+  if (d.ex) { const i = st.experts.indexOf(d.ex); i < 0 ? st.experts.push(d.ex) : st.experts.splice(i, 1); return b.classList.toggle('sel'); }
+  if (d.mode) { lire(); st.mode = d.mode; if (equipe() && !st.cyclesEquipe.length) st.cyclesEquipe = st.cycles.slice(); return rendre(); }
+  if (d.cyceq) { const i = st.cyclesEquipe.indexOf(d.cyceq); i < 0 ? st.cyclesEquipe.push(d.cyceq) : st.cyclesEquipe.splice(i, 1); return b.classList.toggle('on'); }
+  if (d.claude) { un('claude', d.claude, '#claude'); document.getElementById('clbox').classList.toggle('on', d.claude === 'Max' || d.claude === 'Pro'); document.getElementById('clnote').classList.toggle('on', d.claude === 'Non' || d.claude === 'nsp'); return; }
+  if (d.ia) { const l = st.autresIa; if (d.ia === 'Aucun') st.autresIa = l.includes('Aucun') ? [] : ['Aucun']; else { st.autresIa = l.filter(x => x !== 'Aucun'); const i = st.autresIa.indexOf(d.ia); i < 0 ? st.autresIa.push(d.ia) : st.autresIa.splice(i, 1); } app.querySelectorAll('#ias .logo-b').forEach(x => x.classList.toggle('on', st.autresIa.includes(x.dataset.ia))); return; }
+  if (d.mail) { un('mail', d.mail, '#mail'); document.getElementById('mailautre').classList.toggle('on', d.mail === 'Autre'); return; }
+  if (d.docs) return un('docs', d.docs, '#docs');
+  if (d.it) { un('it', d.it, '#it'); document.getElementById('itbox').classList.toggle('on', d.it !== 'non'); return; }
+  if (d.tel) return un('tel', d.tel, '#tel');
+  if (d.outil) { const l = st.outils, i = l.indexOf(d.outil); if (i >= 0) l.splice(i, 1); else if (st.autresOutils.includes(d.outil)) st.autresOutils.splice(st.autresOutils.indexOf(d.outil), 1); else l.push(d.outil); return b.classList.toggle('on'); }
+  if (d.prep) { st.prets[d.prep] = !st.prets[d.prep]; return b.classList.toggle('on', !!st.prets[d.prep]); }
+});
+rendre();
+})();
+</script>
+</body>
+</html>
